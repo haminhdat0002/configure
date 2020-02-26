@@ -6,8 +6,6 @@ import (
 	"fmt"
 	"io"
 	"os"
-
-	"github.com/hashicorp/hcl"
 )
 
 // NewHCL returns an instance of the HCL checker. It takes a function
@@ -43,20 +41,20 @@ func (h *HCL) Setup() error {
 
 	buf := new(bytes.Buffer)
 	buf.ReadFrom(r)
-	s := buf.String()
+	// s := buf.String()
 
-	//first parse the hcl file
-	obj, err := hcl.Parse(s)
-	if err != nil {
-		return err
-	}
+	// //first parse the hcl file
+	// obj, err := hcl.Parse(s)
+	// if err != nil {
+	// 	return err
+	// }
 
-	h.values = make(map[string]interface{})
+	// h.values = make(map[string]interface{})
 
-	// then decode the object
-	if err = hcl.DecodeObject(&h.values, obj); err != nil {
-		return err
-	}
+	// // then decode the object
+	// if err = hcl.DecodeObject(&h.values, obj); err != nil {
+	// 	return err
+	// }
 
 	return nil
 }

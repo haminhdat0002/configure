@@ -14,7 +14,7 @@ package main
 import (
   "fmt"
   
-  "github.com/paked/configure"
+  "github.com/haminhdat0002/configure"
 )
 
 var (

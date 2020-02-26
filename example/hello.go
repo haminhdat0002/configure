@@ -1,9 +1,8 @@
 package main
 
 import (
+	"configure"
 	"fmt"
-
-	"github.com/paked/configure"
 )
 
 var (
